@@ -11,7 +11,7 @@ public class mostrarPantalla {
         System.out.println("""
                 ***************************************
                 sea bienvenido al conversor de monedas
-                
+                 
                 1) Dolar =>> peso argentino
                 2) Peso argentino =>> Dolar
                 3)Dolar =>> Real brasilero
@@ -19,6 +19,8 @@ public class mostrarPantalla {
                 5)Dolar ==> Peso Colombiano
                 6)Peso colombiano =>> Dolar
                 7)salir
+                8)ver conversiones
+                9)Ingresar siglas de las monenas a convertir
                 Elija una opcion valida
                 *************************************""");
         return Integer.parseInt(teclado.next());
@@ -32,6 +34,17 @@ public class mostrarPantalla {
 
     public void mostrarConversionFinal(Conversion conversion, double valorConvertir){
         System.out.println("El valor " + valorConvertir + "[" + conversion.getSiglasMonedaLocal() + "]  corresponde al valor final de =>>" + conversion.getResultado() + "[" + conversion.getSiglasMonedaDestino() + "]");
+    }
+
+    public String siglasMOnedaLocal(){
+        System.out.println("Ingrese las siglas de la moneda local");
+        return teclado.next().toUpperCase();
+    }
+
+    public String siglasMonedaDestino(){
+        System.out.println("Ingrese las siglas de la moneda de destino ");
+        return teclado.next().toUpperCase();
+
     }
 
 

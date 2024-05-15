@@ -45,6 +45,22 @@ public class Main {
                 case 6:
                     automatizarPrecedimiento("COP", "USD", valorConvertir, mostrarPantalla, cliente, direccion,conversions);
                     break;
+                case 8:
+                    ArrayList<Conversion>conversions1=cliente.leerArchivo("conversiones.json");
+                    if(conversions1==null) {
+                        System.out.println("No hay histroial de conversiones");
+                    }else {
+                        System.out.println("Este es el historial de las conversiones");
+                        for (int i = 0; i < conversions1.size(); i++) {
+                            System.out.println(conversions1.get(i).toString());
+                        }
+                    }
+                    break;
+                case 9:
+                    automatizarPrecedimiento(mostrarPantalla.siglasMOnedaLocal(), mostrarPantalla.siglasMonedaDestino(), valorConvertir,mostrarPantalla,cliente,direccion,conversions);
+                    break;
+
+
             }
             opcion = mostrarPantalla.mostrarMenu();
         }
@@ -67,7 +83,9 @@ public class Main {
         Conversion conversion = pedirFiltrarConversion(siglasMonedaLocal, siglasMonedDestino, cliente, direccion);
         conversion.calcularConversionFinal(valorConvertir);
         mostrarPantalla.mostrarConversionFinal(conversion, valorConvertir);
+        conversion.horaFehca();
         conversions.add(conversion);
+
 
 
     }

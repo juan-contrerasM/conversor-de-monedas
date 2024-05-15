@@ -1,8 +1,10 @@
 [
   {
-    "siglasMonedaLocal": "USD",
-    "siglasMonedaDestino": "ARS",
-    "conversion": 864.75,
-    "resultado": 86475.0
+    "siglasMonedaLocal": "COP",
+    "siglasMonedaDestino": "USD",
+    "conversion": 2.5726E-4,
+    "resultado": 1.02904,
+    "horaConverison": "08:18:05.386461",
+    "fechaConvercio": "2024-05-15"
   }
 ]
